@@ -7,5 +7,5 @@ import crypto from 'crypto';
 import appSrc from './app.js';
 const app = appSrc(express, bodyParser, createReadStream, crypto, http);
 
-const PORT = process.env.PORT || 443;
+const PORT = process.env.PORT || 4321;
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}!`));
