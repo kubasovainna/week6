@@ -14,7 +14,7 @@ export default function(express, bodyParser, createReadStream, crypto, http) {
       
       .all('/code/', (req, res) => {
           res.set(CORS);
-          const path = import.meta.url.substring(10);
+          const path = import.meta.url.substring(7);
           createReadStream(path).pipe(res);
           })
       .all('/sha1/:input/', (req, res) => {
